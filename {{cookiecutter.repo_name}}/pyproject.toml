@@ -78,6 +78,7 @@ target-version = ['py311']
 
 [tool.ruff]
 line-length = 92
+force-exclude = true
 
 select = [
   "E",  # pyflakes, pycodestyle
