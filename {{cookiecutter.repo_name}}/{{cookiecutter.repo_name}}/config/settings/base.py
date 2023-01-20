@@ -79,6 +79,7 @@ THIRD_PARTY_APPS = [
     "heroicons",
     "hijack",
     "hijack.contrib.admin",
+    "robots"
 ]
 LOCAL_APPS = [
     "{{cookiecutter.repo_name}}.home.apps.HomeConfig",
@@ -343,3 +344,7 @@ except ImportError:  # Graceful fallback if IceCream isn't installed.
         builtins = __import__("builtins")
     ic = lambda *a: None if not a else (a[0] if len(a) == 1 else a)  # noqa
     setattr(builtins, "ic", ic)
+
+# Django Robots
+# https://django-robots.readthedocs.io/en/latest/#host-directive
+ROBOTS_USE_SCHEME_IN_HOST = True
